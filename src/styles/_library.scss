@@ -6,13 +6,20 @@
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
   place-content: center;
+  padding-bottom: 15vh;
 }
 
 .song-card {
   text-align: center;
   position: relative;
+  background: $sec-color;
   &:hover {
-    background: $highlight-color;
+    background: $main-color;
+    outline: 2px solid $sec-color;
+    h3,
+    h4 {
+      color: $sec-color;
+    }
   }
   img {
     width: 100%;
@@ -23,7 +30,7 @@
     top: 10%;
     right: 10%;
     color: $sec-color;
-    background: rgb(209, 209, 209);
+    background: $main-color;
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
@@ -31,5 +38,10 @@
 }
 
 .song-card.active {
-  background: $highlight-color;
+  background: $main-color;
+  outline: 2px solid $sec-color;
+  h3,
+  h4 {
+    color: $sec-color;
+  }
 }

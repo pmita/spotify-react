@@ -5,7 +5,7 @@
   transform: translate(-50%, -0%);
   width: 100%;
   min-height: 10vh;
-  background: $sec-color;
+  background: $main-color;
 }
 
 .controls {
@@ -18,7 +18,10 @@
   padding: 1rem 0rem;
   @include flex(row, space-evenly, center);
   input {
-    width: 90%;
+    width: 60%;
     padding: 1rem 0rem;
+  }
+  p {
+    color: $sec-color;
   }
 }

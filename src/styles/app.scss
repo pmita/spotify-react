@@ -1,6 +1,6 @@
-$main-color: black;
-$sec-color: white;
-$highlight-color: rgb(236, 202, 245);
+$main-color: #222326;
+$sec-color: #fafafa;
+$highlight-color: #e4abf7;
 
 $h1: 2.6rem;
 $h2: 2rem;
@@ -12,6 +12,8 @@ $h6: 1rem;
 .App {
   min-height: 100vh;
   width: 100vw;
+  background: $main-color;
+  color: $sec-color;
 }
 
 @mixin flex($direction, $justify, $align) {

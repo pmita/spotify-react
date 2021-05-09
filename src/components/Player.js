@@ -38,6 +38,12 @@ const Player = ({currentSong, setCurrentSong, audioRef, isSongPlaying, setIsSong
     if(isSongPlaying){audioRef.current.play();}    
    }
 
+   const updateTimeStampHandler = (e) => {
+    const newTimeStamp = e.target.value
+    setSongDetails({...songDetails, timeStamp: newTimeStamp});
+    audioRef.current.currentTime = newTimeStamp;
+   }
+
    /*
     Functions
    */
@@ -82,8 +88,9 @@ const Player = ({currentSong, setCurrentSong, audioRef, isSongPlaying, setIsSong
                 <input 
                     type="range" 
                     min={0}
-                    max={songDetails. duration}
+                    max={songDetails.duration || 0}
                     value={songDetails.timeStamp}
+                    onChange={updateTimeStampHandler}
                 />
                 <p>{roundUpTime(songDetails.duration)}</p>
             </div>

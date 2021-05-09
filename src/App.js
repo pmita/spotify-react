@@ -37,6 +37,10 @@ const updateTimeStampHandler = (e) =>{
       <Library 
         allSongs={allSongs}
         setAllSongs={setAllSongs}
+        currentSong={currentSong}
+        setCurrentSong={setCurrentSong}
+        isSongPlaying={isSongPlaying}
+        audioRef={audioRef}
       />
       <Player 
         currentSong={currentSong}

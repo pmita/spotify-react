@@ -11,6 +11,9 @@
 .song-card {
   text-align: center;
   position: relative;
+  &:hover {
+    background: $highlight-color;
+  }
   img {
     width: 100%;
     object-fit: cover;

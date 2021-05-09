@@ -22,6 +22,16 @@ function App() {
      duration: 0
    }
  );
+
+ /*
+   Let's setup our events
+ */
+const updateTimeStampHandler = (e) =>{
+  setSongDetails(
+    {...songDetails, timeStamp: e.target.currentTime, duration: e.target.duration}
+  );
+}
+
   return (
     <div className="App">
       <Library 
@@ -41,6 +51,8 @@ function App() {
       <audio 
         ref={audioRef}
         src={currentSong.audio}
+        onTimeUpdate={updateTimeStampHandler}
+        onLoadedMetadata={updateTimeStampHandler}
       >
       </audio>
       

@@ -9,6 +9,7 @@ const Player = ({currentSong, setCurrentSong, audioRef, isSongPlaying, setIsSong
         Adding event Listeners
     */
    const playSongHandler = () => {
+       console.log(audioRef.current);
        if(isSongPlaying){
         audioRef.current.pause();
         setIsSongPlaying(false)
@@ -17,6 +18,14 @@ const Player = ({currentSong, setCurrentSong, audioRef, isSongPlaying, setIsSong
         setIsSongPlaying(true);
        }
    }
+
+   /*
+    Functions
+   */
+  const roundUpTime = (time) => {
+    return( Math.floor(time / 60) + ':' + ("0" + Math.floor(time % 60)).slice(-2))
+  }
+
     return(
         <div className="player">
             <div className="controls">
@@ -36,13 +45,14 @@ const Player = ({currentSong, setCurrentSong, audioRef, isSongPlaying, setIsSong
                 />
             </div>
             <div className="song-info">
-                <p>{songDetails.timeStamp}</p>
+                <p>{roundUpTime(songDetails.timeStamp)}</p>
                 <input 
                     type="range" 
                     min={0}
                     max={songDetails. duration}
+                    value={songDetails.timeStamp}
                 />
-                <p>{songDetails. duration}</p>
+                <p>{roundUpTime(songDetails.duration)}</p>
             </div>
         </div>
     );

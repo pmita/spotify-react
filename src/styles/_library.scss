@@ -1,0 +1,28 @@
+.library {
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
+  place-content: center;
+}
+
+.song-card {
+  text-align: center;
+  position: relative;
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+  .icon {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    color: $sec-color;
+    background: rgb(209, 209, 209);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+}

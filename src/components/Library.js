@@ -1,9 +1,15 @@
 import React from 'react';
+//Importing components
+import SongCard from './SongCard';
 
-const Library = () => {
+const Library = ({allSongs, setAllSongs}) => {
     return(
         <div className="library">
-            <h1>Library</h1>
+            {allSongs.map( song => {
+                return(
+                    <SongCard song={song} key={song.id}/>
+                );
+            })}
         </div>
     );
 }

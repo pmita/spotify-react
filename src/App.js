@@ -6,13 +6,10 @@ import Player from './components/Player';
 import songs from './songs_db';
 
 function App() {
-  /*
-    Let's setup our html reference
-  */
+  /*Let's setup our html reference*/
  const audioRef = useRef(null);
-  /*
-    Let's setup our State
-  */
+
+  /*Let's setup our State*/
  const [allSongs, setAllSongs] = useState(songs);
  const [currentSong, setCurrentSong] = useState(allSongs[0]);
  const [isSongPlaying, setIsSongPlaying] = useState(false);
@@ -23,13 +20,31 @@ function App() {
    }
  );
 
- /*
-   Let's setup our events
- */
+ /*Let's setup our events*/
 const updateTimeStampHandler = (e) =>{
   setSongDetails(
     {...songDetails, timeStamp: e.target.currentTime, duration: e.target.duration}
   );
+}
+
+const onSongEndedHandler = async () => {
+  const songIndex = allSongs.findIndex( stateSong => stateSong.id === currentSong.id);
+  await setCurrentSong(allSongs[(songIndex + 1) % allSongs.length]);
+  //updateActiveSongs(allSongs[(songIndex + 1) % allSongs.length]);
+  if(isSongPlaying){ audioRef.current.play();}
+}
+
+/*Let's set our Functions*/
+const updateActiveSongs = (activeSong) => {
+  const newAllSongs = allSongs.map ( song => {
+      if(song.id === activeSong.id){
+          return {...song, active: true};
+      } else {
+          return {...song, active: false};
+      }
+  });
+  //Upfate allSongs with new active song
+  setAllSongs(newAllSongs);
 }
 
   return (
@@ -59,6 +74,7 @@ const updateTimeStampHandler = (e) =>{
         src={currentSong.audio}
         onTimeUpdate={updateTimeStampHandler}
         onLoadedMetadata={updateTimeStampHandler}
+        onEnded={onSongEndedHandler}
       >
       </audio>
       

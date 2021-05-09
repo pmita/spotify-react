@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const SongCard = ({song, currentSong, setCurrentSong, allSongs, setAllSongs, isSongPlaying, audioRef}) => {
-/*Let's create all our Event Listeners*/
+    /*Let's create all our Event Listeners*/
     const selectSongHandler = async (e) => {
         const newSelectedSong = allSongs.find( stateSong => stateSong.id === song.id);
         await setCurrentSong(newSelectedSong);
@@ -14,7 +14,7 @@ const SongCard = ({song, currentSong, setCurrentSong, allSongs, setAllSongs, isS
         if(isSongPlaying) { audioRef.current.play();}
     }
 
-    /*Functions */
+    /*Let's create our Functions */
     const updateActiveSongs = (activeSong) => {
         const newAllSongs = allSongs.map ( stateSong => {
             if(stateSong.id === activeSong.id){

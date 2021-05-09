@@ -5,9 +5,7 @@ import { faAngleLeft, faPlay, faPause, faAngleRight } from '@fortawesome/free-so
 
 
 const Player = ({currentSong, setCurrentSong, audioRef, isSongPlaying, setIsSongPlaying, songDetails, setSongDetails, allSongs, setAllSongs}) => {
-    /*
-        Adding event Listeners
-    */
+    /*Adding event Listeners*/
    const playSongHandler = () => {
        if(isSongPlaying){
         audioRef.current.pause();
@@ -44,9 +42,7 @@ const Player = ({currentSong, setCurrentSong, audioRef, isSongPlaying, setIsSong
     audioRef.current.currentTime = newTimeStamp;
    }
 
-   /*
-    Functions
-   */
+   /*Let's set our Functions*/
   const roundUpTime = (time) => {
     return( Math.floor(time / 60) + ':' + ("0" + Math.floor(time % 60)).slice(-2))
   }
@@ -54,13 +50,12 @@ const Player = ({currentSong, setCurrentSong, audioRef, isSongPlaying, setIsSong
   const updateActiveSongs = (activeSong) => {
     const newAllSongs = allSongs.map ( song => {
         if(song.id === activeSong.id){
-            return {...song, active: true};
+            return {...song, active: true}; //change current song to active
         } else {
-            return {...song, active: false};
+            return {...song, active: false}; //if no match, set to false 
         }
     });
-    //Upfate allSongs with new active song
-    setAllSongs(newAllSongs);
+    setAllSongs(newAllSongs); ////reset allSongs array with active
   }
 
     return(

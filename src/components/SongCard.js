@@ -8,9 +8,7 @@ const SongCard = ({song, currentSong, setCurrentSong, allSongs, setAllSongs, isS
     const selectSongHandler = async (e) => {
         const newSelectedSong = allSongs.find( stateSong => stateSong.id === song.id);
         await setCurrentSong(newSelectedSong);
-
         updateActiveSongs(newSelectedSong);
-
         if(isSongPlaying) { audioRef.current.play();}
     }
 

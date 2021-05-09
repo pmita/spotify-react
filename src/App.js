@@ -1,5 +1,7 @@
 import React, {useState, useRef} from 'react';
 //Importing our components
+import Nav from './components/Nav';
+import Favourites from './components/Favourites';
 import Library from './components/Library';
 import Player from './components/Player';
 //Import our utility db of songs
@@ -13,24 +15,21 @@ function App() {
  const [allSongs, setAllSongs] = useState(songs);
  const [currentSong, setCurrentSong] = useState(allSongs[0]);
  const [isSongPlaying, setIsSongPlaying] = useState(false);
- const [songDetails, setSongDetails] = useState(
-   {
-     timeStamp: 0,
-     duration: 0
-   }
- );
+ const [songDetails, setSongDetails] = useState({timeStamp: 0, duration: 0});
+ const [isFavouritesOpen, setIsFavouriteOpen] = useState(false);
+ const [favouriteSongs, setFavouriteSongs] = useState(songs);
 
  /*Let's setup our events*/
-const updateTimeStampHandler = (e) =>{
+const updateTimeStampHandler = (event) =>{
   setSongDetails(
-    {...songDetails, timeStamp: e.target.currentTime, duration: e.target.duration}
+    {...songDetails, timeStamp: event.target.currentTime, duration: event.target.duration}
   );
 }
 
 const onSongEndedHandler = async () => {
   const songIndex = allSongs.findIndex( stateSong => stateSong.id === currentSong.id);
   await setCurrentSong(allSongs[(songIndex + 1) % allSongs.length]);
-  //updateActiveSongs(allSongs[(songIndex + 1) % allSongs.length]);
+  updateActiveSongs(allSongs[(songIndex + 1) % allSongs.length]);
   if(isSongPlaying){ audioRef.current.play();}
 }
 
@@ -49,6 +48,15 @@ const updateActiveSongs = (activeSong) => {
 
   return (
     <div className="App">
+      <Nav 
+        isFavouritesOpen={isFavouritesOpen}
+        setIsFavouriteOpen={setIsFavouriteOpen}
+      />
+      <Favourites 
+        isFavouritesOpen={isFavouritesOpen}
+        favouriteSongs={favouriteSongs}
+        setFavouriteSongs={setFavouriteSongs}
+      />
       <Library 
         allSongs={allSongs}
         setAllSongs={setAllSongs}
@@ -68,7 +76,6 @@ const updateActiveSongs = (activeSong) => {
         allSongs={allSongs}
         setAllSongs={setAllSongs}
       />
-
       <audio 
         ref={audioRef}
         src={currentSong.audio}
@@ -76,8 +83,7 @@ const updateActiveSongs = (activeSong) => {
         onLoadedMetadata={updateTimeStampHandler}
         onEnded={onSongEndedHandler}
       >
-      </audio>
-      
+      </audio>   
     </div>
   );
 }

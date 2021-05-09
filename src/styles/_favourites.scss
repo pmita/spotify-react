@@ -1,0 +1,28 @@
+.favourites {
+  position: fixed;
+  top: 0;
+  right: 0;
+  min-height: 90vh;
+  width: 30vw;
+  overflow: scroll;
+  background: $sec-color;
+  z-index: 1;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: minmax(100px, 150px);
+  grid-auto-rows: minmax(150px, 200px);
+}
+
+.favourites.active {
+  transform: translateX(0%);
+}
+
+.favourite-card {
+  @include flex(column, center, center);
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}

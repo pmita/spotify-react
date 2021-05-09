@@ -1,0 +1,24 @@
+.player {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  width: 80%;
+  min-height: 10vh;
+  background: pink;
+}
+
+.controls {
+  padding: 1rem 0rem;
+  width: 100%;
+  @include flex(row, space-evenly, center);
+}
+
+.song-info {
+  padding: 1rem 0rem;
+  @include flex(row, space-evenly, center);
+  input {
+    width: 90%;
+    padding: 1rem 0rem;
+  }
+}

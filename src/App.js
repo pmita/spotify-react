@@ -46,6 +46,8 @@ const updateTimeStampHandler = (e) =>{
         setIsSongPlaying={setIsSongPlaying}
         songDetails={songDetails}
         setSongDetails={setSongDetails}
+        allSongs={allSongs}
+        setAllSongs={setAllSongs}
       />
 
       <audio 

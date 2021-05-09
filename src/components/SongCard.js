@@ -5,7 +5,7 @@ import { faHeart } from '@fortawesome/free-solid-svg-icons';
 
 const SongCard = ({song}) => {
     return(
-        <div className="song-card">
+        <div className={`song-card ${song.active ? 'active' : ''}`}>
             <img src={song.cover} alt={song.artist} />
             <h3>{song.name}</h3>
             <h4>{song.artist}</h4>

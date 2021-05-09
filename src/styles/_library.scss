@@ -26,3 +26,7 @@
     cursor: pointer;
   }
 }
+
+.song-card.active {
+  background: $highlight-color;
+}

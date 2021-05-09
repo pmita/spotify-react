@@ -4,13 +4,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faPlay, faPause, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 
 
-const Player = ({currentSong, setCurrentSong, audioRef}) => {
+const Player = ({currentSong, setCurrentSong, audioRef, isSongPlaying, setIsSongPlaying, songDetails, setSongDetails}) => {
     /*
         Adding event Listeners
     */
    const playSongHandler = () => {
-       console.log(audioRef.current.play);
-       audioRef.current.play();
+       if(isSongPlaying){
+        audioRef.current.pause();
+        setIsSongPlaying(false)
+       } else {
+        audioRef.current.play();
+        setIsSongPlaying(true);
+       }
    }
     return(
         <div className="player">
@@ -22,7 +27,7 @@ const Player = ({currentSong, setCurrentSong, audioRef}) => {
                 <FontAwesomeIcon 
                     onClick = {playSongHandler}
                     className="play-icon"
-                    icon={faPlay}
+                    icon={isSongPlaying ? faPause : faPlay}
                     size="4x"
                 />
                 <FontAwesomeIcon 
@@ -31,9 +36,13 @@ const Player = ({currentSong, setCurrentSong, audioRef}) => {
                 />
             </div>
             <div className="song-info">
-                <p>0</p>
-                <input type="range" />
-                <p>100</p>
+                <p>{songDetails.timeStamp}</p>
+                <input 
+                    type="range" 
+                    min={0}
+                    max={songDetails. duration}
+                />
+                <p>{songDetails. duration}</p>
             </div>
         </div>
     );

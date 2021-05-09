@@ -15,6 +15,13 @@ function App() {
   */
  const [allSongs, setAllSongs] = useState(songs);
  const [currentSong, setCurrentSong] = useState(allSongs[0]);
+ const [isSongPlaying, setIsSongPlaying] = useState(false);
+ const [songDetails, setSongDetails] = useState(
+   {
+     timeStamp: 0,
+     duration: 0
+   }
+ );
   return (
     <div className="App">
       <Library 
@@ -25,6 +32,10 @@ function App() {
         currentSong={currentSong}
         setCurrentSong={setCurrentSong}
         audioRef={audioRef}
+        isSongPlaying={isSongPlaying}
+        setIsSongPlaying={setIsSongPlaying}
+        songDetails={songDetails}
+        setSongDetails={setSongDetails}
       />
 
       <audio 

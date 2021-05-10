@@ -6,7 +6,7 @@
   gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
   place-content: center;
-  padding-bottom: 15vh;
+  padding-bottom: calc(15vh + 1rem);
 }
 
 .song-card {
@@ -45,7 +45,7 @@
 
 .song-card.active {
   background: $main-color;
-  outline: 2px solid $sec-color;
+  outline: 2px solid $highlight-color;
   h3,
   h4 {
     color: $sec-color;
@@ -54,6 +54,6 @@
 
 .song-card.favourite {
   .icon {
-    color: rgb(247, 175, 175);
+    color: $highlight-color;
   }
 }

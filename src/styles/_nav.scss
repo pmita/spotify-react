@@ -7,6 +7,8 @@
     color: $sec-color;
   }
   button {
+    font-family: "Montserrat", sans-serif;
+    position: relative;
     padding: 1rem;
     background: transparent;
     color: $sec-color;
@@ -20,6 +22,15 @@
     }
     span {
       padding-left: 1rem;
+    }
+    .favourites-counter {
+      position: absolute;
+      top: -50%;
+      right: 0;
+      background: $highlight-color;
+      color: $sec-color;
+      padding: 0.5rem;
+      border-radius: 0%;
     }
   }
 }

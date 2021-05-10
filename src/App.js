@@ -17,7 +17,6 @@ function App() {
  const [isSongPlaying, setIsSongPlaying] = useState(false);
  const [songDetails, setSongDetails] = useState({timeStamp: 0, duration: 0});
  const [isFavouritesOpen, setIsFavouriteOpen] = useState(false);
- const [favouriteSongs, setFavouriteSongs] = useState(songs);
 
  /*Let's setup our events*/
 const updateTimeStampHandler = (event) =>{
@@ -51,11 +50,11 @@ const updateActiveSongs = (activeSong) => {
       <Nav 
         isFavouritesOpen={isFavouritesOpen}
         setIsFavouriteOpen={setIsFavouriteOpen}
+        allSongs={allSongs}
       />
       <Favourites 
         isFavouritesOpen={isFavouritesOpen}
-        favouriteSongs={favouriteSongs}
-        setFavouriteSongs={setFavouriteSongs}
+        allSongs={allSongs}
       />
       <Library 
         allSongs={allSongs}

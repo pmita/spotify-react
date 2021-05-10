@@ -24,18 +24,44 @@ const SongCard = ({song, currentSong, setCurrentSong, allSongs, setAllSongs, isS
         //Upfate allSongs with new active song
         setAllSongs(newAllSongs);
       }
+
+      const updateFavouritesHandler = () => {
+        const newFavouritesSongs = allSongs.map ( stateSong => {
+            if(stateSong.id === song.id){
+                if(song.favourite === true){
+                    return{...stateSong, favourite: false}
+                } else {
+                    return {...stateSong, favourite: true}
+                }
+            } else {
+                return {...stateSong};
+            }
+        });
+        
+        setAllSongs(newFavouritesSongs);
+      }
     return(
         <div 
-            onClick={selectSongHandler} 
-            className={`song-card ${song.active ? 'active' : ''}`}
+        /*
+            Events bubbling prevents us from clicking on the heart icon. As
+            such we need to change the onClick event to our img instead of our div.
+            Essentially the user needs to click on the img for them to change the song!
+        */
+        
+            className={`song-card ${song.active ? 'active' : ''} ${song.favourite ? 'favourite' : ''}`}
         >
-            <img src={song.cover} alt={song.artist} />
+            <img 
+                onClick={selectSongHandler}
+                src={song.cover} 
+                alt={song.artist} 
+            />
             <h3>{song.name}</h3>
             <h4>{song.artist}</h4>
             <FontAwesomeIcon
                 className="icon"
                 icon={faHeart}
                 size="4x" 
+                onClick={updateFavouritesHandler}
             />
         </div>
     );

@@ -6,6 +6,7 @@ const songs_db = () => {
     return (
         [
             {
+                favourite: true,
                 name: 'Skates',
                 cover : 'https://chillhop.com/wp-content/uploads/2021/03/74d62bc9370a68e440c1b98eaf650344f0a7faea-1024x1024.jpg',
                 artist: 'SwuM',
@@ -15,6 +16,7 @@ const songs_db = () => {
                 active: true
             },
             {
+                favourite: true,
                 name: 'Lonely Waves',
                 cover : 'https://chillhop.com/wp-content/uploads/2021/02/d12927eedcc2f5afba2ab049a4a1ea46c2266ae3-1024x1024.jpg',
                 artist: 'C Y G N',
@@ -24,6 +26,7 @@ const songs_db = () => {
                 active: false
             },
             {
+                favourite: true,
                 name: 'Kinsfolk',
                 cover : 'https://chillhop.com/wp-content/uploads/2021/02/7f102bdde417f6ead9a120b2b931449e5c12b4da-1024x1024.jpg',
                 artist: 'Aarigod',
@@ -33,6 +36,7 @@ const songs_db = () => {
                 active: false
             },
             {
+                favourite: true,
                 name: 'Skates',
                 cover : 'https://chillhop.com/wp-content/uploads/2021/03/74d62bc9370a68e440c1b98eaf650344f0a7faea-1024x1024.jpg',
                 artist: 'SwuM',
@@ -42,6 +46,7 @@ const songs_db = () => {
                 active: false
             },
             {
+                favourite: false,
                 name: 'Lonely Waves',
                 cover : 'https://chillhop.com/wp-content/uploads/2021/02/d12927eedcc2f5afba2ab049a4a1ea46c2266ae3-1024x1024.jpg',
                 artist: 'C Y G N',
@@ -51,6 +56,7 @@ const songs_db = () => {
                 active: false
             },
             {
+                favourite: false,
                 name: 'Kinsfolk',
                 cover : 'https://chillhop.com/wp-content/uploads/2021/02/7f102bdde417f6ead9a120b2b931449e5c12b4da-1024x1024.jpg',
                 artist: 'Aarigod',
@@ -60,6 +66,7 @@ const songs_db = () => {
                 active: false
             },
             {
+                favourite: false,
                 name: 'Skates',
                 cover : 'https://chillhop.com/wp-content/uploads/2021/03/74d62bc9370a68e440c1b98eaf650344f0a7faea-1024x1024.jpg',
                 artist: 'SwuM',
@@ -69,6 +76,7 @@ const songs_db = () => {
                 active: false
             },
             {
+                favourite: false,
                 name: 'Lonely Waves',
                 cover : 'https://chillhop.com/wp-content/uploads/2021/02/d12927eedcc2f5afba2ab049a4a1ea46c2266ae3-1024x1024.jpg',
                 artist: 'C Y G N',
@@ -78,6 +86,7 @@ const songs_db = () => {
                 active: false
             },
             {
+                favourite: false,
                 name: 'Kinsfolk',
                 cover : 'https://chillhop.com/wp-content/uploads/2021/02/7f102bdde417f6ead9a120b2b931449e5c12b4da-1024x1024.jpg',
                 artist: 'Aarigod',
@@ -87,6 +96,7 @@ const songs_db = () => {
                 active: false
             },
             {
+                favourite: false,
                 name: 'Skates',
                 cover : 'https://chillhop.com/wp-content/uploads/2021/03/74d62bc9370a68e440c1b98eaf650344f0a7faea-1024x1024.jpg',
                 artist: 'SwuM',
@@ -96,6 +106,7 @@ const songs_db = () => {
                 active: false
             },
             {
+                favourite: false,
                 name: 'Lonely Waves',
                 cover : 'https://chillhop.com/wp-content/uploads/2021/02/d12927eedcc2f5afba2ab049a4a1ea46c2266ae3-1024x1024.jpg',
                 artist: 'C Y G N',
@@ -105,6 +116,7 @@ const songs_db = () => {
                 active: false
             },
             {
+                favourite: false,
                 name: 'Kinsfolk',
                 cover : 'https://chillhop.com/wp-content/uploads/2021/02/7f102bdde417f6ead9a120b2b931449e5c12b4da-1024x1024.jpg',
                 artist: 'Aarigod',

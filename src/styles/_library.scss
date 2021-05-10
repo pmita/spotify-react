@@ -24,6 +24,9 @@
   img {
     width: 100%;
     object-fit: cover;
+    &:hover {
+      cursor: pointer;
+    }
   }
   .icon {
     position: absolute;
@@ -33,9 +36,9 @@
     background: $main-color;
     padding: 10px;
     border-radius: 50%;
-    cursor: pointer;
     &:hover {
       color: rgb(247, 175, 175);
+      cursor: pointer;
     }
   }
 }
@@ -46,5 +49,11 @@
   h3,
   h4 {
     color: $sec-color;
+  }
+}
+
+.song-card.favourite {
+  .icon {
+    color: rgb(247, 175, 175);
   }
 }

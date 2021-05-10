@@ -8,7 +8,9 @@ const Favourites = ({isFavouritesOpen, favouriteSongs, setIsFavouriteOpen}) => {
             <h2>Your Favourites</h2>
             {favouriteSongs.map( song => {
                 return(
-                    <FavouriteCard song={song} />
+                    <FavouriteCard 
+                        song={song} 
+                        key={song.id}/>
                 );
             })}
         </div>

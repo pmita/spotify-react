@@ -1,18 +1,22 @@
 .favourites {
   position: fixed;
   top: 0;
-  right: 0;
-  min-height: 90vh;
-  width: 30vw;
+  left: 0;
+  height: 85vh;
+  width: 25vw;
   overflow: scroll;
   background: $sec-color;
   z-index: 1;
-  transform: translateX(100%);
+  transform: translateX(-100%);
   transition: all 0.3s ease;
   display: grid;
   gap: 1rem;
-  grid-template-columns: minmax(100px, 150px);
-  grid-auto-rows: minmax(150px, 200px);
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  h2 {
+    text-align: center;
+    padding: 1rem 0;
+  }
 }
 
 .favourites.active {
@@ -21,8 +25,19 @@
 
 .favourite-card {
   @include flex(column, center, center);
+  transition: all 0.3s ease;
+  padding: 1rem 0;
+  &:hover {
+    scale: 1.1;
+  }
   img {
-    width: 100%;
+    width: 50%;
     object-fit: cover;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .favourites {
+    width: 50vw;
   }
 }

@@ -6,64 +6,22 @@ const songs_db = () => {
     return (
         [
             {
-                favourite: true,
-                name: 'Skates',
+                favourite: false,
+                name: 'By Chance',
                 cover : 'https://chillhop.com/wp-content/uploads/2021/03/74d62bc9370a68e440c1b98eaf650344f0a7faea-1024x1024.jpg',
                 artist: 'SwuM',
-                audio : 'https://mp3.chillhop.com/serve.php/?mp3=15225',
-                color: ['#293433', '#D1AA83'],
+                audio : 'https://mp3.chillhop.com/serve.php/?mp3=15224',
                 id : uuidv4(),
                 active: true
             },
             {
-                favourite: true,
-                name: 'Lonely Waves',
-                cover : 'https://chillhop.com/wp-content/uploads/2021/02/d12927eedcc2f5afba2ab049a4a1ea46c2266ae3-1024x1024.jpg',
-                artist: 'C Y G N',
-                audio : 'https://mp3.chillhop.com/serve.php/?mp3=14980',
-                color: ['#DC77F1', '#97C9F2'],
-                id : uuidv4(),
-                active: false
-            },
-            {
-                favourite: true,
-                name: 'Kinsfolk',
-                cover : 'https://chillhop.com/wp-content/uploads/2021/02/7f102bdde417f6ead9a120b2b931449e5c12b4da-1024x1024.jpg',
-                artist: 'Aarigod',
-                audio : 'https://mp3.chillhop.com/serve.php/?mp3=12996',
-                color: ['#99B761', '#55432B'],
-                id : uuidv4(),
-                active: false
-            },
-            {
-                favourite: true,
-                name: 'Skates',
+                favourite: false,
+                name: 'On the Moon',
                 cover : 'https://chillhop.com/wp-content/uploads/2021/03/74d62bc9370a68e440c1b98eaf650344f0a7faea-1024x1024.jpg',
                 artist: 'SwuM',
-                audio : 'https://mp3.chillhop.com/serve.php/?mp3=15225',
-                color: ['#293433', '#D1AA83'],
+                audio : 'https://mp3.chillhop.com/serve.php/?mp3=15237',
                 id : uuidv4(),
-                active: false
-            },
-            {
-                favourite: false,
-                name: 'Lonely Waves',
-                cover : 'https://chillhop.com/wp-content/uploads/2021/02/d12927eedcc2f5afba2ab049a4a1ea46c2266ae3-1024x1024.jpg',
-                artist: 'C Y G N',
-                audio : 'https://mp3.chillhop.com/serve.php/?mp3=14980',
-                color: ['#DC77F1', '#97C9F2'],
-                id : uuidv4(),
-                active: false
-            },
-            {
-                favourite: false,
-                name: 'Kinsfolk',
-                cover : 'https://chillhop.com/wp-content/uploads/2021/02/7f102bdde417f6ead9a120b2b931449e5c12b4da-1024x1024.jpg',
-                artist: 'Aarigod',
-                audio : 'https://mp3.chillhop.com/serve.php/?mp3=12996',
-                color: ['#99B761', '#55432B'],
-                id : uuidv4(),
-                active: false
+                active: true
             },
             {
                 favourite: false,
@@ -71,39 +29,26 @@ const songs_db = () => {
                 cover : 'https://chillhop.com/wp-content/uploads/2021/03/74d62bc9370a68e440c1b98eaf650344f0a7faea-1024x1024.jpg',
                 artist: 'SwuM',
                 audio : 'https://mp3.chillhop.com/serve.php/?mp3=15225',
-                color: ['#293433', '#D1AA83'],
                 id : uuidv4(),
-                active: false
+                active: true
             },
             {
                 favourite: false,
-                name: 'Lonely Waves',
-                cover : 'https://chillhop.com/wp-content/uploads/2021/02/d12927eedcc2f5afba2ab049a4a1ea46c2266ae3-1024x1024.jpg',
-                artist: 'C Y G N',
-                audio : 'https://mp3.chillhop.com/serve.php/?mp3=14980',
-                color: ['#DC77F1', '#97C9F2'],
-                id : uuidv4(),
-                active: false
-            },
-            {
-                favourite: false,
-                name: 'Kinsfolk',
-                cover : 'https://chillhop.com/wp-content/uploads/2021/02/7f102bdde417f6ead9a120b2b931449e5c12b4da-1024x1024.jpg',
-                artist: 'Aarigod',
-                audio : 'https://mp3.chillhop.com/serve.php/?mp3=12996',
-                color: ['#99B761', '#55432B'],
-                id : uuidv4(),
-                active: false
-            },
-            {
-                favourite: false,
-                name: 'Skates',
+                name: 'Wish',
                 cover : 'https://chillhop.com/wp-content/uploads/2021/03/74d62bc9370a68e440c1b98eaf650344f0a7faea-1024x1024.jpg',
                 artist: 'SwuM',
-                audio : 'https://mp3.chillhop.com/serve.php/?mp3=15225',
-                color: ['#293433', '#D1AA83'],
+                audio : 'https://mp3.chillhop.com/serve.php/?mp3=15230',
                 id : uuidv4(),
-                active: false
+                active: true
+            },
+            {
+                favourite: false,
+                name: 'Reflect',
+                cover : 'https://chillhop.com/wp-content/uploads/2021/03/74d62bc9370a68e440c1b98eaf650344f0a7faea-1024x1024.jpg',
+                artist: 'SwuM',
+                audio : 'https://mp3.chillhop.com/serve.php/?mp3=15238',
+                id : uuidv4(),
+                active: true
             },
             {
                 favourite: false,
@@ -111,7 +56,42 @@ const songs_db = () => {
                 cover : 'https://chillhop.com/wp-content/uploads/2021/02/d12927eedcc2f5afba2ab049a4a1ea46c2266ae3-1024x1024.jpg',
                 artist: 'C Y G N',
                 audio : 'https://mp3.chillhop.com/serve.php/?mp3=14980',
-                color: ['#DC77F1', '#97C9F2'],
+                id : uuidv4(),
+                active: false
+            },
+            {
+                favourite: false,
+                name: 'Blue Moon',
+                cover : 'https://chillhop.com/wp-content/uploads/2021/02/d12927eedcc2f5afba2ab049a4a1ea46c2266ae3-1024x1024.jpg',
+                artist: 'C Y G N',
+                audio : 'https://mp3.chillhop.com/serve.php/?mp3=14990',
+                id : uuidv4(),
+                active: false
+            },
+            {
+                favourite: false,
+                name: 'Playful Obsession',
+                cover : 'https://chillhop.com/wp-content/uploads/2021/02/d12927eedcc2f5afba2ab049a4a1ea46c2266ae3-1024x1024.jpg',
+                artist: 'C Y G N',
+                audio : 'https://mp3.chillhop.com/serve.php/?mp3=14982',
+                id : uuidv4(),
+                active: false
+            },
+            {
+                favourite: false,
+                name: 'Taste of Heaven',
+                cover : 'https://chillhop.com/wp-content/uploads/2021/02/d12927eedcc2f5afba2ab049a4a1ea46c2266ae3-1024x1024.jpg',
+                artist: 'C Y G N',
+                audio : 'https://mp3.chillhop.com/serve.php/?mp3=14992',
+                id : uuidv4(),
+                active: false
+            },
+            {
+                favourite: false,
+                name: 'Dreamlover',
+                cover : 'https://chillhop.com/wp-content/uploads/2021/02/d12927eedcc2f5afba2ab049a4a1ea46c2266ae3-1024x1024.jpg',
+                artist: 'C Y G N',
+                audio : 'https://mp3.chillhop.com/serve.php/?mp3=14993',
                 id : uuidv4(),
                 active: false
             },
@@ -121,10 +101,45 @@ const songs_db = () => {
                 cover : 'https://chillhop.com/wp-content/uploads/2021/02/7f102bdde417f6ead9a120b2b931449e5c12b4da-1024x1024.jpg',
                 artist: 'Aarigod',
                 audio : 'https://mp3.chillhop.com/serve.php/?mp3=12996',
-                color: ['#99B761', '#55432B'],
                 id : uuidv4(),
                 active: false
             },
+            {
+                favourite: false,
+                name: 'Woodnote',
+                cover : 'https://chillhop.com/wp-content/uploads/2021/02/7f102bdde417f6ead9a120b2b931449e5c12b4da-1024x1024.jpg',
+                artist: 'Aarigod',
+                audio : 'https://mp3.chillhop.com/serve.php/?mp3=13011',
+                id : uuidv4(),
+                active: false
+            },
+            {
+                favourite: false,
+                name: 'Golden',
+                cover : 'https://chillhop.com/wp-content/uploads/2021/02/7f102bdde417f6ead9a120b2b931449e5c12b4da-1024x1024.jpg',
+                artist: 'Aarigod',
+                audio : 'https://mp3.chillhop.com/serve.php/?mp3=13004',
+                id : uuidv4(),
+                active: false
+            },
+            {
+                favourite: false,
+                name: 'Evenfalls',
+                cover : 'https://chillhop.com/wp-content/uploads/2021/02/7f102bdde417f6ead9a120b2b931449e5c12b4da-1024x1024.jpg',
+                artist: 'Aarigod',
+                audio : 'https://mp3.chillhop.com/serve.php/?mp3=13006',
+                id : uuidv4(),
+                active: false
+            },
+            {
+                favourite: false,
+                name: 'Maple',
+                cover : 'https://chillhop.com/wp-content/uploads/2021/02/7f102bdde417f6ead9a120b2b931449e5c12b4da-1024x1024.jpg',
+                artist: 'Aarigod',
+                audio : 'https://mp3.chillhop.com/serve.php/?mp3=13012',
+                id : uuidv4(),
+                active: false
+            }
         ]
     );
 }

@@ -12,7 +12,7 @@ const songs_db = () => {
                 artist: 'SwuM',
                 audio : 'https://mp3.chillhop.com/serve.php/?mp3=15224',
                 id : uuidv4(),
-                active: true
+                active: false
             },
             {
                 favourite: false,
@@ -21,7 +21,7 @@ const songs_db = () => {
                 artist: 'SwuM',
                 audio : 'https://mp3.chillhop.com/serve.php/?mp3=15237',
                 id : uuidv4(),
-                active: true
+                active: false
             },
             {
                 favourite: false,
@@ -30,7 +30,7 @@ const songs_db = () => {
                 artist: 'SwuM',
                 audio : 'https://mp3.chillhop.com/serve.php/?mp3=15225',
                 id : uuidv4(),
-                active: true
+                active: false
             },
             {
                 favourite: false,
@@ -39,7 +39,7 @@ const songs_db = () => {
                 artist: 'SwuM',
                 audio : 'https://mp3.chillhop.com/serve.php/?mp3=15230',
                 id : uuidv4(),
-                active: true
+                active: false
             },
             {
                 favourite: false,
@@ -48,7 +48,7 @@ const songs_db = () => {
                 artist: 'SwuM',
                 audio : 'https://mp3.chillhop.com/serve.php/?mp3=15238',
                 id : uuidv4(),
-                active: true
+                active: false
             },
             {
                 favourite: false,

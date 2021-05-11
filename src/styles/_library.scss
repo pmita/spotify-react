@@ -57,3 +57,24 @@
     color: $highlight-color;
   }
 }
+
+/*
+  Let's fix the scroll bar
+*/
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $main-color transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+  background-color: $main-color;
+  border-radius: 20px;
+  border: transparent;
+}
